@@ -1,0 +1,19 @@
+{
+ "_status": "UNRATIFIED TEMPLATE - owner must edit, ratify (date + sign-off), then load; loads fail closed while this line stands",
+ "_table": "priority_rules",
+ "_purpose": "Ratified waitlist priority + tiebreak rules",
+ "_fields": [
+  "rule_id",
+  "criteria",
+  "order",
+  "tiebreak"
+ ],
+ "entries": [
+  {
+   "rule_id": "<example>",
+   "criteria": "<example>",
+   "order": "<example>",
+   "tiebreak": "<example>"
+  }
+ ]
+}
