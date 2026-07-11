@@ -1,0 +1,349 @@
+{
+ "version": "0.1",
+ "vertical": "enrollment-agent",
+ "routes": [
+  {
+   "intent": "inquiry.captured",
+   "senders": [
+    "01"
+   ],
+   "receivers": [
+    "02"
+   ]
+  },
+  {
+   "intent": "tour.request",
+   "senders": [
+    "01",
+    "02"
+   ],
+   "receivers": [
+    "06"
+   ]
+  },
+  {
+   "intent": "tour.event",
+   "senders": [
+    "06"
+   ],
+   "receivers": [
+    "02",
+    "13"
+   ]
+  },
+  {
+   "intent": "application.package",
+   "senders": [
+    "02"
+   ],
+   "receivers": [
+    "human",
+    "13"
+   ]
+  },
+  {
+   "intent": "enroll.request",
+   "senders": [
+    "02"
+   ],
+   "receivers": [
+    "08"
+   ]
+  },
+  {
+   "intent": "enroll.package",
+   "senders": [
+    "08"
+   ],
+   "receivers": [
+    "human",
+    "13"
+   ]
+  },
+  {
+   "intent": "enroll.record",
+   "senders": [
+    "08"
+   ],
+   "receivers": [
+    "09",
+    "11",
+    "12",
+    "13"
+   ]
+  },
+  {
+   "intent": "family.message.request",
+   "senders": [
+    "02",
+    "03",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "12"
+   ],
+   "receivers": [
+    "04"
+   ]
+  },
+  {
+   "intent": "family.message.send",
+   "senders": [
+    "04"
+   ],
+   "receivers": [
+    "external"
+   ]
+  },
+  {
+   "intent": "family.reply",
+   "senders": [
+    "04"
+   ],
+   "receivers": [
+    "02",
+    "05",
+    "09"
+   ]
+  },
+  {
+   "intent": "records.verify.request",
+   "senders": [
+    "02",
+    "08"
+   ],
+   "receivers": [
+    "03"
+   ]
+  },
+  {
+   "intent": "records.verify.result",
+   "senders": [
+    "03"
+   ],
+   "receivers": [
+    "02",
+    "08",
+    "13"
+   ]
+  },
+  {
+   "intent": "forms.request",
+   "senders": [
+    "01",
+    "08",
+    "10",
+    "12"
+   ],
+   "receivers": [
+    "05"
+   ]
+  },
+  {
+   "intent": "forms.received",
+   "senders": [
+    "05"
+   ],
+   "receivers": [
+    "03",
+    "08",
+    "13"
+   ]
+  },
+  {
+   "intent": "waitlist.entry",
+   "senders": [
+    "02"
+   ],
+   "receivers": [
+    "07"
+   ]
+  },
+  {
+   "intent": "seat.offer",
+   "senders": [
+    "07"
+   ],
+   "receivers": [
+    "02",
+    "13"
+   ]
+  },
+  {
+   "intent": "tuition.record",
+   "senders": [
+    "09"
+   ],
+   "receivers": [
+    "13"
+   ]
+  },
+  {
+   "intent": "discount.authority",
+   "senders": [
+    "human"
+   ],
+   "receivers": [
+    "09"
+   ]
+  },
+  {
+   "intent": "withdrawal.open",
+   "senders": [
+    "02"
+   ],
+   "receivers": [
+    "10"
+   ]
+  },
+  {
+   "intent": "release.package",
+   "senders": [
+    "10"
+   ],
+   "receivers": [
+    "human",
+    "13"
+   ]
+  },
+  {
+   "intent": "capacity.status",
+   "senders": [
+    "11"
+   ],
+   "receivers": [
+    "02",
+    "07",
+    "13"
+   ]
+  },
+  {
+   "intent": "deadline.alert",
+   "senders": [
+    "12"
+   ],
+   "receivers": [
+    "02",
+    "03",
+    "09",
+    "14"
+   ]
+  },
+  {
+   "intent": "compliance.hold",
+   "senders": [
+    "12"
+   ],
+   "receivers": [
+    "queue"
+   ]
+  },
+  {
+   "intent": "record.request",
+   "senders": [
+    "01",
+    "02",
+    "03",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "14"
+   ],
+   "receivers": [
+    "13"
+   ]
+  },
+  {
+   "intent": "record.response",
+   "senders": [
+    "13"
+   ],
+   "receivers": [
+    "01",
+    "02",
+    "03",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "14"
+   ]
+  },
+  {
+   "intent": "interaction.log",
+   "senders": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "14"
+   ],
+   "receivers": [
+    "13"
+   ]
+  },
+  {
+   "intent": "report.package",
+   "senders": [
+    "14"
+   ],
+   "receivers": [
+    "human"
+   ]
+  },
+  {
+   "intent": "escalation.*",
+   "senders": [
+    "any"
+   ],
+   "receivers": [
+    "queue"
+   ]
+  },
+  {
+   "intent": "clarification.request",
+   "senders": [
+    "any"
+   ],
+   "receivers": [
+    "queue"
+   ]
+  },
+  {
+   "intent": "integrity.violation",
+   "senders": [
+    "any"
+   ],
+   "receivers": [
+    "queue"
+   ]
+  },
+  {
+   "intent": "config.update",
+   "senders": [
+    "human"
+   ],
+   "receivers": [
+    "any"
+   ]
+  }
+ ]
+}
