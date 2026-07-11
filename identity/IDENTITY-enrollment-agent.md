@@ -1,4 +1,4 @@
-# IDENTITY - Enrollment Agent (v0.1 DRAFT)
+# IDENTITY - Enrollment Agent (v0.1 (ratified 2026-07-11))
 
 The side-load: this file plus routes.json and priority.json turn the generic
 DispatcherAgents runtime into a school/childcare enrollment swarm.
@@ -43,7 +43,7 @@ record adequacy, records release, attendance consequences, custody matters.
 - Tuple layer per agent (DECISIONS.md) + swarm tuples (SWARM.md)
 - Conduct constants: MANNERS.md (hash-registered at boot attestation)
 
-## Playbook priority classes (per core JIT doctrine - DRAFT, owner ratification pending)
+## Playbook priority classes (per core JIT doctrine - ratified 2026-07-11, owner sign-off)
 
 Class 1 (statutory + safety-ceiling): P04 records compliance, P07 capacity &
 ratio watch, P08 licensing watch. Class 2 (pipeline lifecycle + books): P01,
@@ -65,4 +65,4 @@ ident = load_identity("/path/to/enrollment-agents")
 The loader is fail-closed: no routes.json, no track, no load. It audits the
 priority table's status on every load - never silently.
 
-## Status: v0.1 DRAFT - owner ratification pending; not runtime-hardened; no licensed legal, licensing-compliance, or child-privacy review.
+## Status: v0.1 ratified 2026-07-11 - owner sign-off; not runtime-hardened; no licensed legal, licensing-compliance, or child-privacy review.

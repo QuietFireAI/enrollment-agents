@@ -8,7 +8,7 @@ description: "Waitlist management. Use when waitlists need rule-ordered entries 
 **Swarm:** DispatcherAgents Enrollment Swarm (Schools & Childcare)
 **Type:** Sequence execution (waitlist)
 **Autonomy tier:** Autonomous waitlist ordering and seat offers PER THE RATIFIED PRIORITY RULES only - the rules are published policy; an off-rule placement is an integrity violation
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off; not runtime-hardened)
 
 ---
 

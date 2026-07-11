@@ -8,7 +8,7 @@ description: "Enrollment documents. Use when enrollment packages need assembly f
 **Swarm:** DispatcherAgents Enrollment Swarm (Schools & Childcare)
 **Type:** Document production (enrollment packages)
 **Autonomy tier:** Autonomous enrollment-package assembly from approved templates and human-decided terms; the human signs, and the enrollment record's dates and terms must be exact - they drive tuition and compliance clocks
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off; not runtime-hardened)
 
 ---
 

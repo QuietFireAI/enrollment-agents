@@ -8,7 +8,7 @@ description: "Forms and documents. Use when forms and records need requesting, c
 **Swarm:** DispatcherAgents Enrollment Swarm (Schools & Childcare)
 **Type:** Evidence pipeline (forms, sealed custody)
 **Autonomy tier:** Autonomous request, receipt, and inventory of forms and records; medical, custody, and child-specific content is sealed custody - inventoried by existence and routed, never read
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off; not runtime-hardened)
 
 ---
 

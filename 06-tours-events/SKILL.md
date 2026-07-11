@@ -8,7 +8,7 @@ description: "Tours and events. Use when tours and open houses need scheduling p
 **Swarm:** DispatcherAgents Enrollment Swarm (Schools & Childcare)
 **Type:** Scheduling execution (tours, open houses)
 **Autonomy tier:** Autonomous tour and event scheduling within published calendars and capacity; identical tour offering for every family
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off; not runtime-hardened)
 
 ---
 

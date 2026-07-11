@@ -8,7 +8,7 @@ description: "Tuition records. Use when tuition ledgers need charges, payments, 
 **Swarm:** DispatcherAgents Enrollment Swarm (Schools & Childcare)
 **Type:** Financial records (tuition ledger)
 **Autonomy tier:** Autonomous tuition ledger per enrollment terms and the published fee schedule; discounts, financial aid, and arrangements beyond policy execute only on signed human `discount.authority`
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off; not runtime-hardened)
 
 ---
 

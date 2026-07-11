@@ -8,7 +8,7 @@ description: "Compliance and deadlines. Use when immunization windows, license r
 **Swarm:** DispatcherAgents Enrollment Swarm (Schools & Childcare)
 **Type:** Regulatory engine (licensing, immunization clocks)
 **Autonomy tier:** Autonomous clock tracking and alerting per the ratified jurisdiction table; regulatory interpretation and every external filing are human - clocks are facts, conservatism ratified
-**Version:** 0.1 (DRAFT - not implemented)
+**Version:** 0.1 (ratified 2026-07-11 - owner sign-off; not runtime-hardened)
 
 ---
 
