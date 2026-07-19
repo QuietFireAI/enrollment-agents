@@ -41,9 +41,8 @@ enough" lane. The HITL is notified on every variance.
 
 ---
 
-## PROPOSED thresholds — pending owner ratification
+## Ratified thresholds (owner: Jeff Phillips, 2026-07-18, approved as written)
 
-Conservative defaults until ratified or amended. Jurisdictional law always
 governs where stricter.
 
 | Parameter | Proposed | Consumer |
