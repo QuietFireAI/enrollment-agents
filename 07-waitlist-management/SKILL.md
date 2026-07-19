@@ -60,6 +60,7 @@ Dispatcher returns an `ack`.
 | OUT | → 04 Family Communication | Offer notifications (via pipeline templates) | `family.message.request` |
 | OUT | → 13 Enrollment Records | Record lookups | `record.request` |
 | IN | ← 13 Enrollment Records | Record responses | `record.response` |
+| IN | ← 04 | Family opt-out - waitlist nudges halt; the entry itself stands | `family.optout` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

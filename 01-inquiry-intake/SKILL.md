@@ -59,6 +59,8 @@ Dispatcher returns an `ack`.
 | OUT | → 05 Forms & Documents | Inquiry form initiation | `forms.request` |
 | OUT | → 13 Enrollment Records | Record lookups | `record.request` |
 | IN | ← 13 Enrollment Records | Record responses | `record.response` |
+| OUT | → human / 13 / 14 | Safeguarding concern at intake - verbatim, immediate | `safeguarding.notice` |
+| OUT | → 02 / 10 / 13 | Custody or authorization change stated at intake | `custody.notice` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

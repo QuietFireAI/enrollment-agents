@@ -1,5 +1,5 @@
 {
- "_status": "UNRATIFIED TEMPLATE - owner must edit, ratify (date + sign-off), then load; loads fail closed while this line stands",
+ "_status": "UNRATIFIED TEMPLATE - owner must edit, ratify (date + sign-off), then load; loads fail closed while this line stands | DOCTRINE RATIFIED 2026-07-18 (owner: Jeff Phillips); schedule entries are deployment content",
  "_table": "tuition_schedule",
  "_purpose": "Published tuition and fee schedule",
  "_fields": [
@@ -13,5 +13,6 @@
    "rate": "<example>",
    "effective": "<example>"
   }
- ]
+ ],
+ "_doctrine": "ZERO-THRESHOLD RULE (ratified 2026-07-18, permeates all identity blueprints): charges, credits, and refunds matching the published schedule apply automatically with the schedule cited; ANY discount, waiver, or refund beyond it, ANY amount, moves only on signed authority (discount.authority / refund.authority). Books reconciliation tolerance is $0.00 - any variance is reconciliation.exception to the human; 'close enough' is the named breach."
 }

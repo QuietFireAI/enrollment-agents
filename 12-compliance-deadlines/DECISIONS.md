@@ -18,5 +18,7 @@ constrains everything.
 - (an enrollment date is disputed, the earlier date runs the clocks; conservatism ratified)
 - (a certain miss emerges, escalate immediately, quantified; early certainty is compliance)
 - (a rule change is announced but not ratified into the table, alert with the delta; the table changes only by ratification)
+- (licensing or regulatory change lands, jurisdiction.change.notice to 02, 03, 11, 13 with source and effective date; conservatism rule - the stricter requirement and earlier date govern)
+- (records.disclosure.package pending past lead-time, deadline.alert; a records-response clock is a clock like any other)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

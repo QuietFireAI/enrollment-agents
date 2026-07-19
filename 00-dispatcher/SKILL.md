@@ -121,6 +121,14 @@ communication in that one guarantee.
 | `escalation.*` | any | queue |
 | `clarification.request` | any | queue |
 | `integrity.violation` | any | queue |
+| `agent.status` | any | 14 |
+| `reconciliation.exception` | 09 | human, 13 |
+| `safeguarding.notice` | 01, 04, 06 | human, 13, 14 |
+| `custody.notice` | 01, 04, 05 | 02, 10, 13 |
+| `jurisdiction.change.notice` | 12 | 02, 03, 11, 13 |
+| `family.optout` | 04 | 02, 07, 13 |
+| `refund.authority` | human | 09 |
+| `records.disclosure.package` | 13 | human, 12 |
 | `config.update` | human | any |
 
 Any (intent, from, to) tuple not in this table is rejected and logged. The table

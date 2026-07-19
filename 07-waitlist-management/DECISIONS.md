@@ -18,5 +18,6 @@ constrains everything.
 - (family claims a different position than the record, the record's order stands; the claim routes with the rule math attached)
 - (human asks to move a family up, record and route as a policy exception; if directed, recorded with its authority - never silent)
 - (an offer window expires during a family emergency, the expiry fact routes to human before the next offer fires; the rule pauses on a human decision only)
+- (family.optout received on a waitlisted family, nudges halt; the waitlist entry itself stands until the family says otherwise - an opt-out is not a withdrawal)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

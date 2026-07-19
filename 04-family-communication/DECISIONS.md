@@ -18,5 +18,8 @@ constrains everything.
 - (template merge would reveal another family's information, hold; cross-family data in a send is the named failure)
 - (family requests another language, route to human for the approved-translation decision)
 - (family requests contact stop, honor per rule; only human-directed required notices may still send)
+- (safeguarding language appears in any family message, safeguarding.notice verbatim same turn; the service conversation neither references it nor stops conspicuously - what happens next is the human's call alone)
+- (family requests no contact, family.optout to 02, 07, 13; one confirmation, then the named lanes go silent; enrollment obligations continue and say so)
+- (custody change stated in the family channel, custody.notice verbatim; the swarm never adjudicates custody - documentation and human approval move the record)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

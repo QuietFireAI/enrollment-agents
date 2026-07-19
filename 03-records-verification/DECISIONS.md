@@ -18,5 +18,6 @@ constrains everything.
 - (custody order arrives, presence recorded, content sealed, human notified; its terms apply only by human reading)
 - (prior school claims records were sent, nothing arrived, both facts recorded; absence with the claim attached is the status)
 - (an exemption request arrives, route verbatim; grant/deny is a human decision)
+- (jurisdiction.change.notice alters verification requirements, the requirement set re-derives from the cited source; in-flight verifications re-check - the earlier/stricter requirement wins)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

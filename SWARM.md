@@ -8,7 +8,7 @@ defect, not a change.
 
 ## Manifest (generated)
 - Agents: 15 (00-dispatcher + 14 spokes)
-- Routes: 31 entries, 31 distinct intents
+- Routes: 39 entries, 39 distinct intents
 - Playbooks: P01-P10 (playbooks/)
 - Layer stack: MANNERS.md → DISPATCHER_CORE.md → identity/ → DECISIONS.md
   (per agent) → playbooks/ → agent SKILL.md files
@@ -50,7 +50,7 @@ defect, not a change.
 - 12 Compliance & Deadlines Agent
 - 13 Enrollment Records Agent
 - 14 Daily Operations Agent
-- Intents: `application.package`, `capacity.status`, `clarification.request`, `compliance.hold`, `config.update`, `deadline.alert`, `discount.authority`, `enroll.package`, `enroll.record`, `enroll.request`, `escalation.*`, `family.message.request`, `family.message.send`, `family.reply`, `forms.received`, `forms.request`, `inquiry.captured`, `integrity.violation`, `interaction.log`, `record.request`, `record.response`, `records.verify.request`, `records.verify.result`, `release.package`, `report.package`, `seat.offer`, `tour.event`, `tour.request`, `tuition.record`, `waitlist.entry`, `withdrawal.open`
+- Intents: `agent.status`, `application.package`, `capacity.status`, `clarification.request`, `compliance.hold`, `config.update`, `custody.notice`, `deadline.alert`, `discount.authority`, `enroll.package`, `enroll.record`, `enroll.request`, `escalation.*`, `family.message.request`, `family.message.send`, `family.optout`, `family.reply`, `forms.received`, `forms.request`, `inquiry.captured`, `integrity.violation`, `interaction.log`, `jurisdiction.change.notice`, `reconciliation.exception`, `record.request`, `record.response`, `records.disclosure.package`, `records.verify.request`, `records.verify.result`, `refund.authority`, `release.package`, `report.package`, `safeguarding.notice`, `seat.offer`, `tour.event`, `tour.request`, `tuition.record`, `waitlist.entry`, `withdrawal.open`
 
 ## Swarm-level decision tuples (predictable scenarios, pre-deliberated)
 - (two playbooks match one trigger, run neither; clarification.request naming both)

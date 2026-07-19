@@ -57,6 +57,9 @@ Dispatcher returns an `ack`.
 | OUT | → families (external) | Approved sends | `family.message.send` |
 | OUT | → 02 / 05 / 09 | Replies routed by content | `family.reply` |
 | OUT | → 13 Enrollment Records | Every send/reply verbatim | `interaction.log` |
+| OUT | → human / 13 / 14 | Safeguarding concern in family channel - verbatim, immediate | `safeguarding.notice` |
+| OUT | → 02 / 10 / 13 | Custody change arriving in family channel | `custody.notice` |
+| OUT | → 02 / 07 / 13 | Family opt-out - one confirmation, then the named lanes go silent | `family.optout` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

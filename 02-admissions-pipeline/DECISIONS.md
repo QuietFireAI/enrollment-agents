@@ -18,5 +18,8 @@ constrains everything.
 - (family asks why they were not admitted, route verbatim; decision communication is the human's, never templated)
 - (application complete except a document in transit, package goes with the gap named; no silent holds)
 - (a referral source asks about an application's status, nothing discloses; family-authorized channels only)
+- (custody.notice lands on an active family, pipeline posture re-anchored; any pending offer, release, or disclosure re-checks against the noticed change before it moves)
+- (jurisdiction.change.notice affects admissions requirements, requirements re-derived forward; families already in process are re-checked, never retroactively failed without human review)
+- (family.optout received, marketing and nudge lanes halt; enrollment-obligation messages continue and are named as such)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

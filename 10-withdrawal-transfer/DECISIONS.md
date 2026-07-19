@@ -18,5 +18,6 @@ constrains everything.
 - (withdrawal mid-billing-cycle, proration facts per published policy; the refund decision is the human's)
 - (custody-conflicted instructions arrive, freeze and route to human immediately; custody conflicts are legal territory)
 - (a release authorization is ambiguous in scope, both readings route; a records release never proceeds on a guessed scope)
+- (custody.notice on a family in withdrawal/transfer, release and records posture re-anchored; no release proceeds against a noticed change without human approval - the noticed change freezes the ambiguity, not the family)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

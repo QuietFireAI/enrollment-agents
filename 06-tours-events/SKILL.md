@@ -58,6 +58,7 @@ Dispatcher returns an `ack`.
 | OUT | → 13 Enrollment Records | Record lookups | `record.request` |
 | IN | ← 13 Enrollment Records | Record responses | `record.response` |
 | OUT | → 13 Enrollment Records | Ambient logging | `interaction.log` |
+| OUT | → human / 13 / 14 | Safeguarding concern observed around tours/events - verbatim | `safeguarding.notice` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

@@ -18,5 +18,7 @@ constrains everything.
 - (payment arrives for a withdrawn student, record unapplied and route; a closed ledger never silently reopens)
 - (delinquency reaches the published exclusion threshold, facts route to human; a child's attendance is never cut off by automation)
 - (a signed discount references terms that changed since signing, hold and re-confirm naming both states)
+- (tuition books do not reconcile to the penny, reconciliation.exception to human and 13 - $0.00 tolerance (ratified 2026-07-18); 'close enough' is the named breach)
+- (withdrawal refund contemplated, computed from the published schedule and shown; execution only on signed refund.authority - refunds are money, same doctrine as discounts)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

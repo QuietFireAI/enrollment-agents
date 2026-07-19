@@ -18,5 +18,6 @@ constrains everything.
 - (document arrives for the wrong child, misdirect protocol: human immediately, incident logged)
 - (required form missing at an enrollment gate, the gate holds with the gap named; readiness is a fact)
 - (a form arrives partially completed, received-defective, re-request once with the defect named)
+- (court order or custody documentation received, custody.notice to 02, 10, 13 with existence/type/date/source; content handling per sealed rules - interpretation is human territory)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

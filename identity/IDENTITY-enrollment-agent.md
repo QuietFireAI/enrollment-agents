@@ -1,4 +1,4 @@
-# IDENTITY - Enrollment Agent (v0.1 (ratified 2026-07-11))
+# IDENTITY - Enrollment Agent (v0.2 (ratified 2026-07-11))
 
 The side-load: this file plus routes.json and priority.json turn the generic
 DispatcherAgents runtime into a school/childcare enrollment swarm.
@@ -38,8 +38,8 @@ record adequacy, records release, attendance consequences, custody matters.
 ## Structure
 
 - 15 agents (00-dispatcher + 14 spokes) - see ROSTER.md
-- 31 routes, closed track - identity/routes.json is the single source
-- 10 playbooks (P01-P10) - priority classes in identity/priority.json
+- 39 routes, closed track - identity/routes.json is the single source
+- 14 playbooks (P01-P14) - priority classes in identity/priority.json
 - Tuple layer per agent (DECISIONS.md) + swarm tuples (SWARM.md)
 - Conduct constants: MANNERS.md (hash-registered at boot attestation)
 

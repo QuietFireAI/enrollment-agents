@@ -62,6 +62,8 @@ Dispatcher returns an `ack`.
 | IN | ← 12 Compliance & Deadlines | Billing-cycle alerts | `deadline.alert` |
 | OUT | → 13 Enrollment Records | Record lookups | `record.request` |
 | IN | ← 13 Enrollment Records | Record responses | `record.response` |
+| OUT | → human / 13 | Tuition books variance - $0.00 tolerance, human notified | `reconciliation.exception` |
+| IN | ← human | Signed refund authority - refunds are money | `refund.authority` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

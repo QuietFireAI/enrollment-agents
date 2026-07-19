@@ -14,6 +14,12 @@
    "purpose": "<example>",
    "body": "<example>",
    "approved_by": "<example>"
+  },
+  {
+   "template_id": "opt_out_confirmed",
+   "purpose": "One-time confirmation after family.optout; then the named lanes go silent",
+   "body": "We've received your request and will stop {scope} messages to this contact. Messages about your child's active enrollment will still be sent. Questions: contact the office.",
+   "approved_by": "<owner name/date>"
   }
  ]
 }

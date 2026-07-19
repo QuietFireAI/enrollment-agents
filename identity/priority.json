@@ -1,5 +1,5 @@
 {
- "_status": "RATIFIED 2026-07-11 - owner sign-off, approved as written",
+ "_status": "RATIFIED 2026-07-11 - owner sign-off, approved as written; P11-P14 classes added and ratified 2026-07-18 (owner: Jeff Phillips) - P11 safeguarding and P12 custody are class 1: children",
  "_doctrine": "JIT run-priority per core doctrine: class 1 = statutory and safety-ceiling (records/immunization compliance gates, licensed-ratio watch, licensing clocks), class 2 = pipeline lifecycle and books. Pacing over braking: the siding scheduler paces class contention; nothing slam-stops, and ratio math never waits.",
  "classes": {
   "P01": 2,
@@ -11,6 +11,10 @@
   "P07": 1,
   "P08": 1,
   "P09": 2,
-  "P10": 2
+  "P10": 2,
+  "P11": 1,
+  "P12": 1,
+  "P13": 2,
+  "P14": 2
  }
 }

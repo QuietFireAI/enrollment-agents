@@ -18,5 +18,7 @@ constrains everything.
 - (same family inquires through two channels, one deduplicated record; identical process either way)
 - (family asks about accommodations, route to human immediately; accommodation conversations are never automated)
 - (inquiry references another family's situation, the other family's data never enters this record; cross-family references route to human)
+- (safeguarding language or observation appears at intake, safeguarding.notice verbatim same turn to human, 13, 14; no follow-up questions, no statements - the words go to the human untouched)
+- (caller states a custody or authorization change, custody.notice to 02, 10, 13 with the statement verbatim; nothing about the record changes until verified documentation and human approval)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

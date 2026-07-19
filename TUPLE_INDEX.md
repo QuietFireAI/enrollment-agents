@@ -18,6 +18,8 @@ Connected playbooks: all (transport/queues)
 | 00.03 | duplicate envelope_id arrives | re-ack the original outcome; never process twice |
 | 00.04 | compliance.hold received mid-run | suspend the named family's traffic; only 12's release or human direction resumes it |
 | 00.05 | a spoke reports done without its artifact | treat as not-done; the artifact is the proof |
+| 00.06 | authority intent arrives with no registered signer for that lane | reject fail-closed + integrity.violation; an unregistered authority lane does not exist |
+| 00.07 | an agent's wait on another passes its timeout | agent.status to 14; waits are visible by rule, never discovered by surprise |
 
 ## Agent 01 - inquiry-intake
 Connected playbooks: none (tuple-layer only)
@@ -28,9 +30,11 @@ Connected playbooks: none (tuple-layer only)
 | 01.02 | same family inquires through two channels | one deduplicated record; identical process either way |
 | 01.03 | family asks about accommodations | route to human immediately; accommodation conversations are never automated |
 | 01.04 | inquiry references another family's situation | the other family's data never enters this record; cross-family references route to human |
+| 01.05 | safeguarding language or observation appears at intake | safeguarding.notice verbatim same turn to human, 13, 14; no follow-up questions, no statements - the words go to the human untouched |
+| 01.06 | caller states a custody or authorization change | custody.notice to 02, 10, 13 with the statement verbatim; nothing about the record changes until verified documentation and human approval |
 
 ## Agent 02 - admissions-pipeline
-Connected playbooks: P01
+Connected playbooks: P01, P12
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -38,6 +42,9 @@ Connected playbooks: P01
 | 02.02 | family asks why they were not admitted | route verbatim; decision communication is the human's, never templated |
 | 02.03 | application complete except a document in transit | package goes with the gap named; no silent holds |
 | 02.04 | a referral source asks about an application's status | nothing discloses; family-authorized channels only |
+| 02.05 | custody.notice lands on an active family | pipeline posture re-anchored; any pending offer, release, or disclosure re-checks against the noticed change before it moves |
+| 02.06 | jurisdiction.change.notice affects admissions requirements | requirements re-derived forward; families already in process are re-checked, never retroactively failed without human review |
+| 02.07 | family.optout received | marketing and nudge lanes halt; enrollment-obligation messages continue and are named as such |
 
 ## Agent 03 - records-verification
 Connected playbooks: P01, P02, P04
@@ -48,9 +55,10 @@ Connected playbooks: P01, P02, P04
 | 03.02 | custody order arrives | presence recorded, content sealed, human notified; its terms apply only by human reading |
 | 03.03 | prior school claims records were sent, nothing arrived | both facts recorded; absence with the claim attached is the status |
 | 03.04 | an exemption request arrives | route verbatim; grant/deny is a human decision |
+| 03.05 | jurisdiction.change.notice alters verification requirements | the requirement set re-derives from the cited source; in-flight verifications re-check - the earlier/stricter requirement wins |
 
 ## Agent 04 - family-communication
-Connected playbooks: P01, P02, P03, P04, P05, P06
+Connected playbooks: P01, P02, P03, P04, P05, P06, P13, P14
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -58,9 +66,12 @@ Connected playbooks: P01, P02, P03, P04, P05, P06
 | 04.02 | template merge would reveal another family's information | hold; cross-family data in a send is the named failure |
 | 04.03 | family requests another language | route to human for the approved-translation decision |
 | 04.04 | family requests contact stop | honor per rule; only human-directed required notices may still send |
+| 04.05 | safeguarding language appears in any family message | safeguarding.notice verbatim same turn; the service conversation neither references it nor stops conspicuously - what happens next is the human's call alone |
+| 04.06 | family requests no contact | family.optout to 02, 07, 13; one confirmation, then the named lanes go silent; enrollment obligations continue and say so |
+| 04.07 | custody change stated in the family channel | custody.notice verbatim; the swarm never adjudicates custody - documentation and human approval move the record |
 
 ## Agent 05 - forms-documents
-Connected playbooks: P02, P04, P06, P08
+Connected playbooks: P02, P04, P06, P08, P14
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -68,6 +79,7 @@ Connected playbooks: P02, P04, P06, P08
 | 05.02 | document arrives for the wrong child | misdirect protocol: human immediately, incident logged |
 | 05.03 | required form missing at an enrollment gate | the gate holds with the gap named; readiness is a fact |
 | 05.04 | a form arrives partially completed | received-defective, re-request once with the defect named |
+| 05.05 | court order or custody documentation received | custody.notice to 02, 10, 13 with existence/type/date/source; content handling per sealed rules - interpretation is human territory |
 
 ## Agent 06 - tours-events
 Connected playbooks: P01
@@ -78,6 +90,7 @@ Connected playbooks: P01
 | 06.02 | tour no-show asks to rebook repeatedly | the published rebooking rule governs; the rule is the boundary |
 | 06.03 | staff share impressions after a tour | not recorded here; the tour record carries attendance facts only |
 | 06.04 | a tour request names a specific classroom to observe | the published tour format governs; format exceptions are human decisions |
+| 06.05 | safeguarding concern observed around a tour or event | safeguarding.notice verbatim same turn; the event record stays factual and separate |
 
 ## Agent 07 - waitlist-management
 Connected playbooks: P03, P07
@@ -88,6 +101,7 @@ Connected playbooks: P03, P07
 | 07.02 | family claims a different position than the record | the record's order stands; the claim routes with the rule math attached |
 | 07.03 | human asks to move a family up | record and route as a policy exception; if directed, recorded with its authority - never silent |
 | 07.04 | an offer window expires during a family emergency | the expiry fact routes to human before the next offer fires; the rule pauses on a human decision only |
+| 07.05 | family.optout received on a waitlisted family | nudges halt; the waitlist entry itself stands until the family says otherwise - an opt-out is not a withdrawal |
 
 ## Agent 08 - enrollment-documents
 Connected playbooks: P02
@@ -100,7 +114,7 @@ Connected playbooks: P02
 | 08.04 | an enrollment is requested that 11's capacity facts cannot seat | the capacity fact governs; the conflict routes - the ratio has no override |
 
 ## Agent 09 - tuition-records
-Connected playbooks: P05
+Connected playbooks: P05, P13
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -108,9 +122,11 @@ Connected playbooks: P05
 | 09.02 | payment arrives for a withdrawn student | record unapplied and route; a closed ledger never silently reopens |
 | 09.03 | delinquency reaches the published exclusion threshold | facts route to human; a child's attendance is never cut off by automation |
 | 09.04 | a signed discount references terms that changed since signing | hold and re-confirm naming both states |
+| 09.05 | tuition books do not reconcile to the penny | reconciliation.exception to human and 13 - $0.00 tolerance (ratified 2026-07-18); 'close enough' is the named breach |
+| 09.06 | withdrawal refund contemplated | computed from the published schedule and shown; execution only on signed refund.authority - refunds are money, same doctrine as discounts |
 
 ## Agent 10 - withdrawal-transfer
-Connected playbooks: P06
+Connected playbooks: P06, P12
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -118,6 +134,7 @@ Connected playbooks: P06
 | 10.02 | withdrawal mid-billing-cycle | proration facts per published policy; the refund decision is the human's |
 | 10.03 | custody-conflicted instructions arrive | freeze and route to human immediately; custody conflicts are legal territory |
 | 10.04 | a release authorization is ambiguous in scope | both readings route; a records release never proceeds on a guessed scope |
+| 10.05 | custody.notice on a family in withdrawal/transfer | release and records posture re-anchored; no release proceeds against a noticed change without human approval - the noticed change freezes the ambiguity, not the family |
 
 ## Agent 11 - roster-capacity
 Connected playbooks: P07
@@ -128,9 +145,10 @@ Connected playbooks: P07
 | 11.02 | a staffing change alters the effective ratio mid-day | capacity recomputes immediately; the change routes to human - ratios are live math |
 | 11.03 | roster and enrollment records disagree | both facts to human; the roster never silently reconciles |
 | 11.04 | a capacity fact would open a seat for under the offer-window duration | the fact routes with the window math; a seat that cannot survive the published window is a human call |
+| 11.05 | jurisdiction.change.notice alters ratios or capacity rules | the math re-derives from the cited source; if current enrollment exceeds the new line, human immediately with the numbers - the cap is law, the remedy is human |
 
 ## Agent 12 - compliance-deadlines
-Connected playbooks: P02, P04, P08
+Connected playbooks: P02, P04, P08, P14
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -138,9 +156,11 @@ Connected playbooks: P02, P04, P08
 | 12.02 | an enrollment date is disputed | the earlier date runs the clocks; conservatism ratified |
 | 12.03 | a certain miss emerges | escalate immediately, quantified; early certainty is compliance |
 | 12.04 | a rule change is announced but not ratified into the table | alert with the delta; the table changes only by ratification |
+| 12.05 | licensing or regulatory change lands | jurisdiction.change.notice to 02, 03, 11, 13 with source and effective date; conservatism rule - the stricter requirement and earlier date govern |
+| 12.06 | records.disclosure.package pending past lead-time | deadline.alert; a records-response clock is a clock like any other |
 
 ## Agent 13 - enrollment-records
-Connected playbooks: none (tuple-layer only)
+Connected playbooks: P11, P12, P14
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -148,9 +168,11 @@ Connected playbooks: none (tuple-layer only)
 | 13.02 | a request would unseal medical or custody content | refuse with the seal named |
 | 13.03 | retention conflicts with an open dispute or licensing matter | the hold wins; escalate |
 | 13.04 | storage write unconfirmed | not done until re-verified; unconfirmed is reported failed |
+| 13.05 | external records request arrives (agency, school, parent) | assemble the disclosure inventory - existence, type, date, source only, custody flags named per item - records.disclosure.package to human and 12; release is a human decision, always custody-checked |
+| 13.06 | safeguarding.notice received | recorded verbatim with sealed handling; access to this record is itself logged |
 
 ## Agent 14 - daily-operations
-Connected playbooks: P07, P09, P10
+Connected playbooks: P07, P09, P10, P11
 
 | # | Crossing | Predeliberated answer |
 |---|---|---|
@@ -158,5 +180,7 @@ Connected playbooks: P07, P09, P10
 | 14.02 | EOD sweep finds an untouched morning item | miss named with its owner; the sweep never reassigns |
 | 14.03 | human unreachable at book time | publish to the queue and hold |
 | 14.04 | a ratio-margin flag spans the book boundary | it leads both books until resolved; ratio state never ages into a footnote |
+| 14.05 | agent.status reports a wait past threshold | named in report.package with age and blocking party; the morning report carries every wait |
+| 14.06 | safeguarding.notice received | ops visibility same turn; the record shows the handoff happened - nothing else about it appears in routine reporting |
 
-Total tuples: 61. Swarm-wide tuples: SWARM.md. Coverage map: TASK_INVENTORY.md.
+Total tuples: 85. Swarm-wide tuples: SWARM.md. Coverage map: TASK_INVENTORY.md.

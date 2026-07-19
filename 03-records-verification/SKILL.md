@@ -61,6 +61,7 @@ Dispatcher returns an `ack`.
 | OUT | → 04 Family Communication | Records-status messages | `family.message.request` |
 | OUT | → 13 Enrollment Records | Record lookups | `record.request` |
 | IN | ← 13 Enrollment Records | Record responses | `record.response` |
+| IN | ← 12 | Regulatory change - verification requirements re-derived | `jurisdiction.change.notice` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

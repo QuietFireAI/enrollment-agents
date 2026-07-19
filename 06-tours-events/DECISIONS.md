@@ -18,5 +18,6 @@ constrains everything.
 - (tour no-show asks to rebook repeatedly, the published rebooking rule governs; the rule is the boundary)
 - (staff share impressions after a tour, not recorded here; the tour record carries attendance facts only)
 - (a tour request names a specific classroom to observe, the published tour format governs; format exceptions are human decisions)
+- (safeguarding concern observed around a tour or event, safeguarding.notice verbatim same turn; the event record stays factual and separate)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

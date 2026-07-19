@@ -178,4 +178,86 @@ PB = [
          "Ratio-margin flags lead both books until resolved."],
   completion="EOD books delivered; sweep complete with owners named; completion event logged.",
   abort=["Morning baseline absent: the sweep names that first and proceeds on records alone."]),
+
+ dict(num="P11", slug="safeguarding-handoff", name="Safeguarding Handoff",
+  desc="Swarm deployment: safeguarding concern detected anywhere to verbatim human handoff, sealed record, ops visibility. Agents 01/04/06 (detection), 13, 14. The swarm's entire role is the handoff: no questions, no statements, no visible change in posture - what happens next is the human's alone.",
+  trigger="`safeguarding.notice` from intake (01), family channel (04), or tours/events (06).",
+  pre=["The concern is captured verbatim with source, timestamp, and child/family reference - the human receives the words, not a summary."],
+  phases=[
+   ("Phase 1 - Handoff (same turn)", [
+    ("1","01/04/06","Route the concern verbatim; the routine conversation neither references it nor halts conspicuously","`safeguarding.notice` \u2192 human, 13, 14","verbatim record delivered, human alerted"),
+    ("2","14","Ops visibility same turn; nothing about it appears in routine reporting beyond the handoff fact","(ops log)","daily book shows the handoff happened"),
+   ]),
+   ("Phase 2 - Sealed record", [
+    ("3","13","Sealed record entry - verbatim, access itself logged","`interaction.log` (sealed handling)","record complete; reads are audited"),
+   ]),
+  ],
+  gates=["No agent asks follow-up questions, makes statements, or visibly changes posture toward the family - investigation, notification, and mandated reporting are human decisions under law.",
+         "The record is sealed: routine reports carry the handoff fact only, never the content."],
+  completion="Verbatim handoff delivered same turn, sealed record complete, ops aware of the handoff fact; the human owns everything after.",
+  abort=["Ambiguity about whether something is a safeguarding concern: hand it off - the conservative read is the only read.",
+         "The concern implicates staff: identical handoff, zero internal routing beyond human and sealed record."]),
+
+ dict(num="P12", slug="custody-change-wave", name="Custody Change Wave",
+  desc="Swarm deployment: stated or documented custody/authorization change to a re-anchored record with human-approved effect. Agents 01/04/05 (detection), 02, 10, 13. The swarm never adjudicates custody: statements are noticed, documentation is inventoried, and only human approval moves the record.",
+  trigger="`custody.notice` from intake (01), family channel (04), or received documentation (05).",
+  pre=["The prior authorization facts (pickup list, records access, financial responsibility) are on record - a change is only a change against a recorded baseline."],
+  phases=[
+   ("Phase 1 - Notice and freeze the ambiguity", [
+    ("1","01/04/05","Notice verbatim with source; documentation inventoried existence/type/date/source","`custody.notice` \u2192 02, 10, 13","notice on record; nothing changed yet"),
+    ("2","02","Pending offers, releases, and disclosures re-check against the notice before moving","(hold where affected)","no affected action proceeds on the old facts"),
+   ]),
+   ("Phase 2 - Human-approved effect", [
+    ("3","10","Release/records posture re-anchored only on verified documentation + human approval","`release.package` \u2192 human (where releases pend)","human decision on record"),
+    ("4","13","The change, its documentation, and the approval recorded as one auditable unit","`interaction.log`","who changed what, on whose approval, citing what"),
+   ]),
+  ],
+  gates=["The swarm never decides who has custody - a stated change freezes affected ambiguity; only verified documentation plus human approval changes pickup, access, or disclosure.",
+         "Both parents/guardians retain their existing recorded rights until the human rules - a notice is not a verdict."],
+  completion="Every affected pending action re-checked, the record changed only under human approval with documentation cited, the full unit auditable.",
+  abort=["Conflicting custody claims arrive: both recorded verbatim; all affected actions hold; human immediately - conflicts are legal territory.",
+         "A pickup situation is live while ambiguity stands: human immediately, same turn - safety over process, always."]),
+
+ dict(num="P13", slug="refund-tuition-reconciliation", name="Refund & Tuition Reconciliation",
+  desc="Swarm deployment: withdrawal refund from published schedule to signed execution with books at $0.00. Agents 10, 09, 04, 13. Refunds are money: the schedule computes, the human signs, the books reconcile to the penny.",
+  trigger="Withdrawal completes (P06) with a refundable balance per the published tuition schedule, or `reconciliation.exception` surfaces a credit.",
+  pre=["The published tuition schedule and the family's payment record are both on file - the refund is arithmetic shown, never judgment applied."],
+  phases=[
+   ("Phase 1 - Compute and package", [
+    ("1","09","Refund computed from the published schedule; every number carries its source","`tuition.record` \u2192 13","computation on record"),
+    ("2","09","Package to human: schedule citation, payments, computed refund","`reconciliation.exception` \u2192 human, 13 (as the money package)","package delivered"),
+   ]),
+   ("Phase 2 - Signed execution", [
+    ("3","09","Refund executes only on signed authority","(await `refund.authority` \u2190 human)","signed envelope on the chain first"),
+    ("4","04","Family informed from posted facts once executed","`family.message.send` \u2192 external","templated notice, facts only"),
+    ("5","09","Books reconcile to $0.00 or the variance escalates","`reconciliation.exception` \u2192 human, 13 (if any variance)","clean books or a named exception"),
+   ]),
+  ],
+  gates=["No refund executes unsigned - refund.authority is money, same doctrine as discount.authority.",
+         "The $0.00 rule governs: any variance between schedule, payments, and executed refund is an exception, never absorbed."],
+  completion="Refund executed on signed authority per the published schedule, family informed, books at $0.00; or the blocking question named to the human.",
+  abort=["Family disputes the schedule computation: the dispute routes verbatim with the arithmetic attached - the swarm shows its work and stops.",
+         "Financial responsibility is under a custody conflict (P12): the refund holds until the human rules on payee."]),
+
+ dict(num="P14", slug="records-request-response", name="Records Request Response",
+  desc="Swarm deployment: external records request (agency, receiving school, parent) to human-approved disclosure inside the clock. Agents 13, 12, 05, 04. Every item is custody-flagged; release is a human decision - a records request about a child is never routine.",
+  trigger="External records request lands via 04 (family channel) or intake (01); agency/compliance requests via 12.",
+  pre=["The request is captured verbatim with date, requester, claimed relationship/authority, scope, and the applicable response window."],
+  phases=[
+   ("Phase 1 - Clock and inventory", [
+    ("1","12","Response clock armed (jurisdictional default if none stated)","`deadline.alert` \u2192 14 (at lead-times)","clock live"),
+    ("2","13","Disclosure inventory: existence, type, date, source per item - custody flags named per item","`records.disclosure.package` \u2192 human, 12","inventory delivered inside lead-time"),
+    ("3","05","Documentation supporting the requester's authority inventoried (never adjudicated)","`forms.received` \u2192 03, 13 (references)","authority-support status per requester"),
+   ]),
+   ("Phase 2 - Human release", [
+    ("4","13","Record the human's release decision and what was disclosed","`record.response` + `interaction.log`","itemized: who, what, when, under whose approval, custody check noted"),
+    ("5","04","Transmit per the approved scope","`family.message.send` \u2192 external (or agency channel per direction)","transmission artifact on record"),
+   ]),
+  ],
+  gates=["Nothing beyond the human's itemized approval is disclosed - the approval is the ceiling.",
+         "Requester authority is never adjudicated by the swarm - custody flags and supporting documentation go to the human; the decision is theirs (P12 doctrine).",
+         "A noticed custody change freezes affected disclosures until the human rules."],
+  completion="Human-approved disclosure transmitted inside the clock with a complete itemized, custody-checked record; or refusal/clarification recorded the same way.",
+  abort=["Requester's claimed authority conflicts with the record: human immediately with both facts - never split the difference.",
+         "Request arrives under legal process (subpoena, court order): counsel's lane - the swarm inventories and waits for direction."]),
 ]

@@ -58,6 +58,7 @@ Dispatcher returns an `ack`.
 | OUT | → 04 Family Communication | Form chase messages | `family.message.request` |
 | IN | ← 04 Family Communication | Forms in replies | `family.reply` |
 | OUT | → 13 Enrollment Records | Ambient logging | `interaction.log` |
+| OUT | → 02 / 10 / 13 | Custody documentation received (court order, authorization form) | `custody.notice` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

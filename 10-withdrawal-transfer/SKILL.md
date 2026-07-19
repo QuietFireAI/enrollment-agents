@@ -59,6 +59,7 @@ Dispatcher returns an `ack`.
 | OUT | → 04 Family Communication | Exit process messages | `family.message.request` |
 | OUT | → 13 Enrollment Records | Record lookups | `record.request` |
 | IN | ← 13 Enrollment Records | Record responses | `record.response` |
+| IN | ← 01 / 04 / 05 | Custody change - release/records posture re-anchored | `custody.notice` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

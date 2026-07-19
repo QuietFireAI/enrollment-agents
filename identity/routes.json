@@ -1,5 +1,5 @@
 {
- "version": "0.1",
+ "version": "0.2",
  "vertical": "enrollment-agent",
  "routes": [
   {
@@ -334,6 +334,93 @@
    ],
    "receivers": [
     "queue"
+   ]
+  },
+  {
+   "intent": "agent.status",
+   "senders": [
+    "any"
+   ],
+   "receivers": [
+    "14"
+   ]
+  },
+  {
+   "intent": "reconciliation.exception",
+   "senders": [
+    "09"
+   ],
+   "receivers": [
+    "human",
+    "13"
+   ]
+  },
+  {
+   "intent": "safeguarding.notice",
+   "senders": [
+    "01",
+    "04",
+    "06"
+   ],
+   "receivers": [
+    "human",
+    "13",
+    "14"
+   ]
+  },
+  {
+   "intent": "custody.notice",
+   "senders": [
+    "01",
+    "04",
+    "05"
+   ],
+   "receivers": [
+    "02",
+    "10",
+    "13"
+   ]
+  },
+  {
+   "intent": "jurisdiction.change.notice",
+   "senders": [
+    "12"
+   ],
+   "receivers": [
+    "02",
+    "03",
+    "11",
+    "13"
+   ]
+  },
+  {
+   "intent": "family.optout",
+   "senders": [
+    "04"
+   ],
+   "receivers": [
+    "02",
+    "07",
+    "13"
+   ]
+  },
+  {
+   "intent": "refund.authority",
+   "senders": [
+    "human"
+   ],
+   "receivers": [
+    "09"
+   ]
+  },
+  {
+   "intent": "records.disclosure.package",
+   "senders": [
+    "13"
+   ],
+   "receivers": [
+    "human",
+    "12"
    ]
   },
   {

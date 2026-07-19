@@ -18,5 +18,7 @@ constrains everything.
 - (EOD sweep finds an untouched morning item, miss named with its owner; the sweep never reassigns)
 - (human unreachable at book time, publish to the queue and hold)
 - (a ratio-margin flag spans the book boundary, it leads both books until resolved; ratio state never ages into a footnote)
+- (agent.status reports a wait past threshold, named in report.package with age and blocking party; the morning report carries every wait)
+- (safeguarding.notice received, ops visibility same turn; the record shows the handoff happened - nothing else about it appears in routine reporting)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

@@ -67,6 +67,12 @@ Dispatcher returns an `ack`.
 | IN | ← 09 Tuition Records | Ledger records | `tuition.record` |
 | IN | ← 10 Withdrawal & Transfer | Release packages (audit) | `release.package` |
 | IN | ← 11 Roster & Capacity | Capacity facts | `capacity.status` |
+| OUT | → human / 12 | Disclosure inventory (existence/type/date/source, custody-flagged) for human release | `records.disclosure.package` |
+| IN | ← 01 / 04 / 06 | Safeguarding notices on the record (verbatim, sealed handling) | `safeguarding.notice` |
+| IN | ← 01 / 04 / 05 | Custody notices on the record | `custody.notice` |
+| IN | ← 12 | Regulatory changes on the record | `jurisdiction.change.notice` |
+| IN | ← 04 | Family opt-outs on the record | `family.optout` |
+| IN | ← 09 | Reconciliation exceptions (books copy) | `reconciliation.exception` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

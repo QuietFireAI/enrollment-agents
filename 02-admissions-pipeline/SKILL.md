@@ -71,6 +71,9 @@ Dispatcher returns an `ack`.
 | IN | ← 12 Compliance & Deadlines | Pipeline clock alerts | `deadline.alert` |
 | OUT | → 13 Enrollment Records | Record lookups | `record.request` |
 | IN | ← 13 Enrollment Records | Record responses | `record.response` |
+| IN | ← 01 / 04 / 05 | Custody/authorization change - pipeline posture re-anchored | `custody.notice` |
+| IN | ← 12 | Licensing/regulatory change - admissions posture re-checked | `jurisdiction.change.notice` |
+| IN | ← 04 | Family opt-out - marketing/nudge lanes halt | `family.optout` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

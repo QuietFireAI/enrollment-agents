@@ -1,5 +1,5 @@
 {
- "_status": "UNRATIFIED TEMPLATE - owner must edit, ratify (date + sign-off), then load; loads fail closed while this line stands",
+ "_status": "UNRATIFIED TEMPLATE - owner must edit, ratify (date + sign-off), then load; loads fail closed while this line stands | DOCTRINE RATIFIED 2026-07-18 (owner: Jeff Phillips); cap entries are jurisdictional deployment content",
  "_table": "ratio_caps",
  "_purpose": "LICENSED ratios and configured caps - no override",
  "_fields": [
@@ -15,5 +15,6 @@
    "cap": "<example>",
    "basis_ref": "<example>"
   }
- ]
+ ],
+ "_doctrine": "THE CAP IS LAW (restated as binding config doctrine): licensed ratios and capacities are physics for this swarm - no enrollment, offer, or re-accommodation exceeds them, ever; a jurisdiction.change.notice re-derives the math same turn, and an over-line condition goes to the human immediately with the numbers. The remedy is human; the line is not."
 }

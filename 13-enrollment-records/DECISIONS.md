@@ -18,5 +18,7 @@ constrains everything.
 - (a request would unseal medical or custody content, refuse with the seal named)
 - (retention conflicts with an open dispute or licensing matter, the hold wins; escalate)
 - (storage write unconfirmed, not done until re-verified; unconfirmed is reported failed)
+- (external records request arrives (agency, school, parent), assemble the disclosure inventory - existence, type, date, source only, custody flags named per item - records.disclosure.package to human and 12; release is a human decision, always custody-checked)
+- (safeguarding.notice received, recorded verbatim with sealed handling; access to this record is itself logged)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)

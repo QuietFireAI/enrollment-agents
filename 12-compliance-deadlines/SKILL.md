@@ -61,6 +61,8 @@ Dispatcher returns an `ack`.
 | OUT | → 04 Family Communication | Deadline notices (approved templates) | `family.message.request` |
 | OUT | → 13 Enrollment Records | Record lookups | `record.request` |
 | IN | ← 13 Enrollment Records | Record responses | `record.response` |
+| OUT | → 02 / 03 / 11 / 13 | Licensing/regulatory change with source and effective date | `jurisdiction.change.notice` |
+| IN | ← 13 | Records disclosure pending - response clock armed | `records.disclosure.package` |
 
 This agent has no other edges. If a task appears to require any other
 communication path, that is an ambiguity condition (section 6) - stop and ask

@@ -18,5 +18,6 @@ constrains everything.
 - (a staffing change alters the effective ratio mid-day, capacity recomputes immediately; the change routes to human - ratios are live math)
 - (roster and enrollment records disagree, both facts to human; the roster never silently reconciles)
 - (a capacity fact would open a seat for under the offer-window duration, the fact routes with the window math; a seat that cannot survive the published window is a human call)
+- (jurisdiction.change.notice alters ratios or capacity rules, the math re-derives from the cited source; if current enrollment exceeds the new line, human immediately with the numbers - the cap is law, the remedy is human)
 
 (Root rule, restated: no suitable tuple - or an uncertain match - means STOP and ask the human.)
