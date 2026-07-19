@@ -7,7 +7,7 @@ description: "Swarm deployment: safeguarding concern detected anywhere to verbat
 
 **Swarm:** DispatcherAgents Enrollment Swarm (Schools & Childcare)
 **Type:** Deployment playbook (consumed by Agent 00 - Dispatcher)
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off; not runtime-hardened)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ## Trigger
 `safeguarding.notice` from intake (01), family channel (04), or tours/events (06).

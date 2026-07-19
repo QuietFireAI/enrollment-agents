@@ -7,7 +7,7 @@ description: "Swarm deployment: continuous roster and licensed-ratio math with l
 
 **Swarm:** DispatcherAgents Enrollment Swarm (Schools & Childcare)
 **Type:** Deployment playbook (consumed by Agent 00 - Dispatcher)
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off; not runtime-hardened)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ## Trigger
 Continuous: every `enroll.record`, withdrawal, and staffing-input change recomputes.

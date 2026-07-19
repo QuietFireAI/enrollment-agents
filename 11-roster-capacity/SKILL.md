@@ -8,7 +8,7 @@ description: "Roster and capacity. Use when rosters and capacity need live math 
 **Swarm:** DispatcherAgents Enrollment Swarm (Schools & Childcare)
 **Type:** Records engine (rosters, ratios)
 **Autonomy tier:** Autonomous roster records and capacity math per LICENSED RATIOS AND CONFIGURED CAPS - the licensing ratio is physics; no enrollment fact ever exceeds it, and overrides do not exist
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off; not runtime-hardened)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ---
 

@@ -8,7 +8,7 @@ description: "Inquiry intake. Use when family inquiries need complete capture wi
 **Swarm:** DispatcherAgents Enrollment Swarm (Schools & Childcare)
 **Type:** Intake (family inquiries)
 **Autonomy tier:** Autonomous inquiry capture and routing; NEVER an admissions opinion, availability promise beyond the record, or any question touching protected characteristics - identical process for every family
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off; not runtime-hardened)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ---
 

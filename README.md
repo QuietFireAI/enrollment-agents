@@ -6,9 +6,7 @@ school/childcare enrollment swarm, loadable into the content-neutral
 The runtime never contains vertical text; this repo never contains transport
 code. That split is the architecture.
 
-**Status: v0.1 ratified 2026-07-11 - owner sign-off. Not runtime-hardened. No
-licensed legal, licensing-compliance, or child-privacy review has been
-performed.**
+**Status: v0.2 ratified 2026-07-18 (extended from v0.1 2026-07-11) - owner sign-off. Blueprint, not runtime-hardened. No licensed regulatory, or education/childcare-practice review has been performed.**
 
 ## What this is for
 
@@ -35,7 +33,7 @@ What it never does - the five absolute lines (identity/IDENTITY-enrollment-agent
 | Path | What it is |
 |---|---|
 | `identity/routes.json` | The closed track: 31 (intent, senders, receivers) routes - single source of truth |
-| `identity/priority.json` | JIT playbook priority classes (ratified 2026-07-11) |
+| `identity/priority.json` | JIT playbook priority classes (ratified 2026-07-11; extended & ratified 2026-07-18) |
 | `identity/IDENTITY-enrollment-agent.md` | The identity declaration |
 | `00-dispatcher/ ... 14-daily-operations/` | 15 agent SKILL.md + DECISIONS.md (tuple layer) |
 | `playbooks/P01 ... P10` | Deployment playbooks: inquiry-to-application through EOD books |

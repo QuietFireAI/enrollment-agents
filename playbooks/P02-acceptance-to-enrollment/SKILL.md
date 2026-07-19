@@ -7,7 +7,7 @@ description: "Swarm deployment: the human's acceptance to an executed, gate-clea
 
 **Swarm:** DispatcherAgents Enrollment Swarm (Schools & Childcare)
 **Type:** Deployment playbook (consumed by Agent 00 - Dispatcher)
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off; not runtime-hardened)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ## Trigger
 The human's acceptance decision fires `enroll.request` at 08.

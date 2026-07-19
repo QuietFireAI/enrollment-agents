@@ -7,7 +7,7 @@ description: "Swarm deployment: stated or documented custody/authorization chang
 
 **Swarm:** DispatcherAgents Enrollment Swarm (Schools & Childcare)
 **Type:** Deployment playbook (consumed by Agent 00 - Dispatcher)
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off; not runtime-hardened)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ## Trigger
 `custody.notice` from intake (01), family channel (04), or received documentation (05).

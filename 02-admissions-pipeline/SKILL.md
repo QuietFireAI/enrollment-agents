@@ -8,7 +8,7 @@ description: "Admissions pipeline. Use when applications need IDENTICAL-format p
 **Swarm:** DispatcherAgents Enrollment Swarm (Schools & Childcare)
 **Type:** Coordination (applications, offers)
 **Autonomy tier:** Autonomous application assembly and pipeline tracking with IDENTICAL-format packages; admission decisions, their reasons, and their communication are the human's - the pipeline sequences, never selects
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off; not runtime-hardened)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ---
 

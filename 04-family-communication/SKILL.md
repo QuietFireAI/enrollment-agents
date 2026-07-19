@@ -8,7 +8,7 @@ description: "Family communication. Use when families need templated messages or
 **Swarm:** DispatcherAgents Enrollment Swarm (Schools & Childcare)
 **Type:** Communication hub (family-facing)
 **Autonomy tier:** Autonomous sends from approved templates; NO admissions-decision content, no child-specific judgments, identical templates for every family - decision communication is the human's
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off; not runtime-hardened)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ---
 

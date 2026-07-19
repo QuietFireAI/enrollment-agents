@@ -7,7 +7,7 @@ description: "Swarm deployment: enrollment terms to a clean ledger - charges, pa
 
 **Swarm:** DispatcherAgents Enrollment Swarm (Schools & Childcare)
 **Type:** Deployment playbook (consumed by Agent 00 - Dispatcher)
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off; not runtime-hardened)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ## Trigger
 `enroll.record` opens the ledger; the published billing cycle drives it.

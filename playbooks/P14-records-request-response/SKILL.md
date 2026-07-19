@@ -7,7 +7,7 @@ description: "Swarm deployment: external records request (agency, receiving scho
 
 **Swarm:** DispatcherAgents Enrollment Swarm (Schools & Childcare)
 **Type:** Deployment playbook (consumed by Agent 00 - Dispatcher)
-**Version:** 0.1 (ratified 2026-07-11 - owner sign-off; not runtime-hardened)
+**Version:** 0.2 (ratified 2026-07-18; extended & ratified 2026-07-18 - owner sign-off)
 
 ## Trigger
 External records request lands via 04 (family channel) or intake (01); agency/compliance requests via 12.
